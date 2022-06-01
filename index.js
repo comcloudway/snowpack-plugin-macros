@@ -14,7 +14,7 @@ module.exports = function (snowpackConfig, pluginOptions) {
                   contents,
                   ext: fileExt,
                   path: id
-                }));
+                })||results[0]);
               })
       }
 
