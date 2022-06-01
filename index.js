@@ -9,14 +9,12 @@ module.exports = function (snowpackConfig, pluginOptions) {
       if (supported_etxs.includes(fileExt)) {
         Object.entries(pluginOptions || {})
               .forEach(([regexp, transform])=>{
-                contents = contents.replace(
-                  new RegExp(regexp, 'g'),
-                  (...results)=>transform({
-                    results,
-                    contents,
-                    ext: fileExt,
-                    path: id
-                  })||results[0]);
+                contents = contents.replace(new RegExp(regexp, 'g'), (...results)=>transform({
+                  results,
+                  contents,
+                  ext: fileExt,
+                  path: id
+                }));
               })
       }
 
