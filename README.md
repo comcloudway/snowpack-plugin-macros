@@ -48,6 +48,8 @@ path: ""
 }
 ```
 
+The callback function has to return the new string, which shall be used to replace the old value.
+
 ### Restrictions
 
 This plugin works on the snowpack transform stage, so its only works on `*.js` or `*.css` files.
