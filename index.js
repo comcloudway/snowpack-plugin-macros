@@ -1,6 +1,6 @@
 const pkg = require('./package.json');
 
-const supported_etxs = ['.js', '.css'];
+const supported_etxs = ['.js', '.css', '.jsx'];
 
 module.exports = function (snowpackConfig, pluginOptions) {
   return {
