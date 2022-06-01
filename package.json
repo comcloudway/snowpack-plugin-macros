@@ -1,24 +1,24 @@
 {
-  "name": "snowpack-plugin-macros",
+  "name": "snowpack-plugin-replace",
   "version": "1.0.4",
-  "description": "Adds macros to snowpack",
+  "description": "replace your code",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/comcloudway/snowpack-plugin-macros.git"
+    "url": "git+https://github.com/moonrailgun/snowpack-plugin-replace.git"
   },
   "keywords": [
     "snowpack",
     "snowpack-plugin",
-    "macro"
+    "replace"
   ],
-  "author": "Jakob Meier <comcloudway@ccw.icu>",
+  "author": "moonrailgun",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/comcloudway/snowpack-plugin-macros/issues"
+    "url": "https://github.com/moonrailgun/snowpack-plugin-replace/issues"
   },
-  "homepage": "https://github.com/comcloudway/snowpack-plugin-macros#readme"
+  "homepage": "https://github.com/moonrailgun/snowpack-plugin-replace#readme"
 }
