@@ -6,7 +6,7 @@ This plugin adds basic macros to snowpack.
 ### Install
 
 ```
-npm install --save-dev snowpack-plugin-replace
+npm i --save-dev https://github.com/comcloudway/snowpack-plugin-macros
 ```
 
 ### Config
