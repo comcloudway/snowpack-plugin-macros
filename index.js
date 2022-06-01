@@ -1,34 +1,23 @@
 const pkg = require('./package.json');
 
-const supportExt = ['.js', '.css']
+const supported_etxs = ['.js', '.css'];
 
 module.exports = function (snowpackConfig, pluginOptions) {
   return {
     name: pkg.name,
     transform({ id, contents, fileExt }) {
-      if(!supportExt.includes(fileExt)) {
-        // Skip not support version
-        return contents;
+      if (supported_etxs.includes(fileExt)) {
+        Object.entries(pluginOptions || {})
+              .forEach(([regexp, transform])=>{
+                contents = contents.replace(new RegExp(regexp, 'g'), (...results)=>transform({
+                  results,
+                  contents,
+                  ext: fileExt,
+                  path: id
+                }));
+              })
       }
 
-      const list = pluginOptions.list || [];
-      for (let item of list) {
-        const file = item.file;
-        if(typeof file === 'string') {
-          // If specify file path. check it
-          if(file !== id) {
-            continue;
-          }
-        }
-
-        let str = item.from;
-        if(str === undefined || str === null) {
-          continue;
-        }
-
-        const replaceValue = item.to;
-        contents = contents.replace(str, replaceValue);
-      }
       return contents;
     },
   };
